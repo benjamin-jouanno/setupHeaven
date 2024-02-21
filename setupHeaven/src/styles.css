@@ -1,16 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../src/styles/settings/_variables.scss";
 
-html, body { height: 100%; }
-body { 
-    margin: 0; 
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
     font-family: "Fira Code", monospace;
 }
 
 .page {
-    margin: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--navy-blue);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.gradient-page {
+    padding: 1.5rem;
+    background: var(--navy-blue);
+    background: linear-gradient(140deg, var(--navy-blue) 0%, var(--light-navy-blue) 41%, var(--turquoise-blue) 68%);
+}
+
+h1 {
+    font-weight: 800;
+    color: var(--white);
+}
