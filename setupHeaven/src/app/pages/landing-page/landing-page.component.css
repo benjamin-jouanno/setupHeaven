@@ -16,7 +16,7 @@
     float: right;
     right: 1rem;
     position: relative;
-    background-color: var(--light-navy-blue);
+    background-color: var(--hovered-blue);
     color: var(--white);
     border: none;
     border-radius: 5px;
@@ -32,10 +32,26 @@
 }
 
 .sign-in:hover {
-    background-color: var(--navy-blue);
+    background-color: var(--turquoise-blue);
     transition: ease-in-out .3s;
 }
 
 .content {
     margin-top: 4rem;
+}
+
+.accent {
+    color: var(--hovered-blue);
+}
+
+.title-label {
+    color: var(--pastel-yellow);
+    text-decoration: underline var(--hovered-blue) 1px;
+    text-underline-offset: 10px;
+}
+
+.n-text {
+    font-family: 'ClashDisplay-Light';
+    font-size:large;
+    color: var(--pastel-yellow);
 }
