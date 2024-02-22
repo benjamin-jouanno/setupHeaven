@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from '../../shared/services/authentication.service';
 import { FormControl, Validators } from '@angular/forms';
-import { IAuthenticateData } from '../../shared/types/AuthenticateData.type';
+import { IAuthenticateData, iUser } from '../../shared/types/AuthenticateData.type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -10,12 +11,16 @@ import { IAuthenticateData } from '../../shared/types/AuthenticateData.type';
 })
 export class LoginPageComponent {
 
-  identifier = new FormControl('', [Validators.required, Validators.email])
-  password = new FormControl('', [Validators.required])
+  username = new FormControl('', [Validators.required]);
+  identifier = new FormControl('', [Validators.required, Validators.email]);
+  password = new FormControl('', [Validators.required]);
+  confirmPassword = new FormControl('', [Validators.required]);
 
-  constructor( private authenticationService: AuthenticationService) {}
+  isRegister = false;
 
-  authenticate() {
+  constructor(private authenticationService: AuthenticationService, private router: Router) { }
+
+  authenticate(): void {
     if (this.identifier.valid && this.password.valid) {
       const identifier = this.identifier.getRawValue();
       const password = this.password.getRawValue()
@@ -26,12 +31,43 @@ export class LoginPageComponent {
       this.authenticationService.authenticate(userDataSet).subscribe(res => {
         this.authenticationService.setJwtToken(
           {
-            token: res.data.jwt
+            token: res.jwt
           }
-        )
+        );
+        this.authenticationService.setConnectedUser(res.user);
+        this.router.navigateByUrl('dashboard');
       }, err => {
         console.error(err);
       });
     }
+  }
+
+  createAccount(): void {
+    if (this.identifier.valid && this.password.valid && this.confirmPassword.valid && this.username.valid) {
+      const identifier = this.identifier.getRawValue();
+      const password = this.password.getRawValue();
+      const confirmPassword = this.confirmPassword.getRawValue();
+      const username = this.username.getRawValue();
+      if (password === confirmPassword) {
+        const user: iUser = {
+          email: identifier ? identifier : '',
+          password: password ? password : '',
+          username: username ? username : ''
+        }
+        this.authenticationService.registerAccount(user).subscribe(res => {
+          this.authenticationService.setJwtToken({
+            token: res.jwt
+          })
+          this.authenticationService.setConnectedUser(res.user);
+          this.router.navigateByUrl('dashboard');
+        }, err => {
+          console.error(err);
+        })
+      }
+    }
+  }
+
+  switchStatus(): void {
+    this.isRegister = !this.isRegister;
   }
 }

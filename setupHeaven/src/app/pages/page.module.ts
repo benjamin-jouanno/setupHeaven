@@ -6,11 +6,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
 @NgModule({
-  declarations: [LandingPageComponent, LoginPageComponent],
+  declarations: [LandingPageComponent, LoginPageComponent, DashboardComponent],
   imports: [
     CommonModule,
     SharedComponentsModule,
@@ -19,6 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
    ],
-  exports:[LandingPageComponent, LoginPageComponent]
+  exports:[LandingPageComponent, LoginPageComponent, DashboardComponent]
 })
 export class PageModule { }

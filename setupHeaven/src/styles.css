@@ -26,11 +26,12 @@ body {
     background: linear-gradient(140deg, var(--navy-blue) 0%, var(--light-navy-blue) 41%, var(--turquoise-blue) 68%);
 }
 
-h1 {
+h1, h2 {
     font-weight: 800;
     color: var(--pastel-yellow);
     font-family: "ClashDisplay-Semibold", "monospace";
 }
+
 
 .panel {
     background-color: var(--light-navy-blue);

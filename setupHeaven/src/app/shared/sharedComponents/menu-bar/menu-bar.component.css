@@ -1,0 +1,18 @@
+.tool-bar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--hovered-blue);
+}
+
+h2 {
+    position: relative;
+    float: left;
+    left: 1rem;
+}
+
+.user-info {
+    position: absolute;
+    float: right;
+    right: 1rem;
+    color: var(--pastel-yellow);
+}
