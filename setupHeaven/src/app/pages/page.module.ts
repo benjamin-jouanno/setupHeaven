@@ -2,18 +2,23 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SharedComponentsModule } from '../shared/sharedComponents/shared-components.module';
-import { MaterialComponentsModule } from '../shared/modules/material-components/material-components.module';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [LandingPageComponent],
+  declarations: [LandingPageComponent, LoginPageComponent],
   imports: [
     CommonModule,
     SharedComponentsModule,
-    MatIconModule
-  ],
-  exports:[LandingPageComponent]
+    MatIconModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+   ],
+  exports:[LandingPageComponent, LoginPageComponent]
 })
 export class PageModule { }

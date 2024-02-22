@@ -12,25 +12,6 @@
     }
 }
 
-.sign-in {
-    float: right;
-    right: 1rem;
-    position: relative;
-    background-color: var(--hovered-blue);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    padding-left: .5rem;
-    padding-right: .5rem;
-    padding-top: .3rem;
-    padding-bottom: .3rem;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-    transition: ease-in-out .3s;
-    mat-icon {
-        vertical-align:sub;
-    }
-}
-
 .sign-in:hover {
     background-color: var(--turquoise-blue);
     transition: ease-in-out .3s;
@@ -54,4 +35,8 @@
     font-family: 'ClashDisplay-Light';
     font-size:large;
     color: var(--pastel-yellow);
+}
+
+.missing {
+    color: var(--red);
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageModule } from './pages/page.module';
 
@@ -10,7 +10,8 @@ import { PageModule } from './pages/page.module';
   imports:[CommonModule,
     RouterOutlet,
     NgbModule,
-    PageModule
+    PageModule,
+    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -1,0 +1,50 @@
+.login-panel {
+    width: 70%;
+}
+
+.title-bar {
+    padding: .7rem;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--hovered-blue);
+}
+
+.input-box {
+    mat-icon {
+        vertical-align:sub;
+    }
+}
+
+input {
+    background-color: transparent;
+    border: 1px var(--hovered-blue) solid;
+    border-radius: 5px;
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+input::placeholder {
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+.separator {
+    height: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+}
+
+.btn {
+    width: fit-content;
+    text-align: center;
+}
+
+.register-line {
+    margin-top: 1rem;
+    font-size: small;
+    .register {
+        margin-left: .2rem;
+        margin-right: .2rem;
+        color: var(--hovered-blue);
+        cursor: pointer;
+    }
+}
