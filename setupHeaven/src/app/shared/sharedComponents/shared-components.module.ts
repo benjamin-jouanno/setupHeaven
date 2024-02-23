@@ -6,16 +6,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LiteShotComponent } from './lite-shot/lite-shot.component';
 import { ThemeTagComponent } from './theme-tag/theme-tag.component';
+import { ShotViewerDialogComponent } from './shot-viewer-dialog/shot-viewer-dialog.component';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
 @NgModule({
-  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent],
+  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatIconModule,
+    MatDialogModule
   ],
-  exports:[MenuBarComponent, LiteShotComponent, ThemeTagComponent]
+  exports: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent]
 })
 export class SharedComponentsModule { }

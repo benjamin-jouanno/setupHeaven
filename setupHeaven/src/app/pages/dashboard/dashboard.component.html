@@ -2,7 +2,7 @@
 <div class="page h-100">
     <div class="shot-list p-1" *ngIf="_shotList | async as shots">
         <li *ngFor="let shot of shots.data">
-            <app-lite-shot [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>
+            <app-lite-shot (click)="openShot(shot)" [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>
         </li>
     </div>
 </div>

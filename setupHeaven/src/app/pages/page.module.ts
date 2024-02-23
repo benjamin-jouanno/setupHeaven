@@ -7,6 +7,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -19,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule
    ],
   exports:[LandingPageComponent, LoginPageComponent, DashboardComponent]
 })

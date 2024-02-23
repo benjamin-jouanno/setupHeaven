@@ -21,13 +21,19 @@ body {
     color: var(--pastel-yellow);
 }
 
+.dialog-page {
+    padding: 1.5rem;
+    background-color: var(--light-navy-blue);
+    color: var(--pastel-yellow);
+}
+
 .gradient-page {
     padding: 1.5rem;
     background: var(--navy-blue);
     background: linear-gradient(140deg, var(--navy-blue) 0%, var(--light-navy-blue) 41%, var(--turquoise-blue) 68%);
 }
 
-h1, h2 {
+h1, h2, h4 {
     font-weight: 800;
     color: var(--pastel-yellow);
     font-family: "ClashDisplay-Semibold", "monospace";
@@ -64,3 +70,32 @@ h1, h2 {
         vertical-align:sub;
     }
 }
+
+.separator {
+    height: 1rem;
+    margin: 1rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    padding-right: 5px;
+
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--navy-blue);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--navy-blue);
+  }

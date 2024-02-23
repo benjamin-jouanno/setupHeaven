@@ -39,3 +39,7 @@ export enum TAG_NAME {
     minimal = 'minimal',
     anime = 'anime'
 }
+
+export interface StrapiResponse {
+    attributes: IShot;
+}
