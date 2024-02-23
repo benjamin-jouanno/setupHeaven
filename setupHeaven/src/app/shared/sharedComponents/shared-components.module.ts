@@ -4,16 +4,18 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MaterialComponentsModule } from '../modules/material-components/material-components.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LiteShotComponent } from './lite-shot/lite-shot.component';
+import { ThemeTagComponent } from './theme-tag/theme-tag.component';
 
 
 
 @NgModule({
-  declarations: [MenuBarComponent],
+  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule
   ],
-  exports:[MenuBarComponent]
+  exports:[MenuBarComponent, LiteShotComponent, ThemeTagComponent]
 })
 export class SharedComponentsModule { }

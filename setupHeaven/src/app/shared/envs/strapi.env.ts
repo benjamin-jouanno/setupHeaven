@@ -6,7 +6,7 @@ export interface IStrapiEnv {
 }
 
 export const StrapiLocalEnv: IStrapiEnv =  {
-    baseUrl: 'http://localhost:1337',
+    baseUrl: 'http://localhost:4203',
     authentication: '/api/auth/local',
     register: '/api/auth/local/register',
     me: '/api/users/me',

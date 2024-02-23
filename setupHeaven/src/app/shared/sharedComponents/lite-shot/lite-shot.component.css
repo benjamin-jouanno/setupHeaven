@@ -1,0 +1,44 @@
+.shot {
+    width: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-zone {
+    background-color: var(--turquoise-blue);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.info-zone {
+    padding-left: .8rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: var(--light-navy-blue);
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.title {
+    font-size: large;
+    font-weight: 700;
+}
+
+.tags {
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+li {
+    list-style-type:none;
+    float: left;
+    margin-left: .2rem;
+    margin-bottom: .5rem;
+}
+
+.thumbnail {
+    border-radius: 10px 10px 0px 0px;
+    max-width:100%;
+    height: auto;
+    object-fit:contain;
+}

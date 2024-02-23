@@ -50,4 +50,9 @@ export class AuthenticationService {
   public getMeUser(): Observable<iUser> {
     return this.httpClient.get<iUser>(this.strapiEnv.baseUrl + this.strapiEnv.me, { headers: { Authorization: 'Bearer ' + this.jwt.token } });
   }
+
+  disconnect(): void {
+    this.cookieService.deleteAll();
+    this.setJwtToken({token: ''});
+  }
 }

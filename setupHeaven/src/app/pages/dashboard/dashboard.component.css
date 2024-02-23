@@ -1,0 +1,16 @@
+.page {
+    padding-top: 4rem;
+}
+
+li {
+    list-style-type:none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transform: translate3d(0px, 0px, 0px);
+    display: inline-block;
+}
+
+.shot-list {
+    position: relative;
+}

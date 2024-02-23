@@ -1,0 +1,9 @@
+.tag {
+    border-radius: 15px;
+    background-color: var(--hovered-blue);
+    width: fit-content;
+    font-size: small;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    height: fit-content;
+}

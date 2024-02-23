@@ -1,0 +1,14 @@
+<div class="shot d-flex flex-column">
+    <div class="img-zone">
+        <img class="thumbnail" src="{{ strapiEnv.baseUrl + shot?.shotPictures.data[0].attributes.formats.small.url}}">
+    </div>
+    <div class="info-zone d-flex flex-column">
+        <span class="title">{{ shot?.title }}</span>
+        <span class="username">{{ shot?.username }}</span>
+        <div class="tags">
+            <li style="height: fit-content;" *ngFor="let tag of shot?.themes">
+                <app-theme-tag [tagName]="tag.tagName"></app-theme-tag>
+            </li>
+        </div>
+    </div>
+</div>
