@@ -1,6 +1,6 @@
-<div class="shot d-flex flex-column">
-    <div class="img-zone">
-        <img class="thumbnail" src="{{ strapiEnv.baseUrl + shot?.shotPictures.data[0].attributes.formats.small.url}}">
+<div class="shot d-flex flex-column" *ngIf="shot">
+    <div class="img-zone" *ngIf="shot?.shotPictures">
+        <img class="thumbnail" *ngIf="shot?.shotPictures.data[0]" src="{{ strapiEnv.baseUrl + shot?.shotPictures.data[0].attributes.formats.small.url}}">
     </div>
     <div class="info-zone d-flex flex-column">
         <span class="title">{{ shot?.title }}</span>

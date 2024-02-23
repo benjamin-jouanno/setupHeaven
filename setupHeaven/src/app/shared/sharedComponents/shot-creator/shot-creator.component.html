@@ -1,0 +1,23 @@
+<div class="dialog-page">
+    <div class="title">
+        <h2>Create a shot</h2>
+        <div class="separator"></div>
+        <form [formGroup]="shotForm">
+            <div class="input-zone d-flex flex-column">
+                <h4>Title *</h4>
+                <input formControlName="title" type="text" placeholder="title">
+            </div>
+            <div class="input-zone d-flex flex-column">
+                <h4>Subtitle *</h4>
+                <input formControlName="subtitle" type="text" placeholder="subtitle">
+            </div>
+            <div class="input-zone d-flex flex-column">
+                <h4>Description *</h4>
+                <textarea formControlName="description" type="text-area" placeholder="description">
+                </textarea>
+            </div>
+        <div class="separator"></div>
+            <button class="btn submit" (click)="submit()">Create</button>
+        </form>
+    </div>
+</div>

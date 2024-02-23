@@ -1,5 +1,10 @@
 <app-menu-bar></app-menu-bar>
 <div class="page h-100">
+    <div class="action-bar  row d-flex flex-row">
+        <div class="Submit">
+            <button class="btn" (click)="createShot()">Submit a shot</button>
+        </div>
+    </div>
     <div class="shot-list p-1" *ngIf="_shotList | async as shots">
         <li *ngFor="let shot of shots.data">
             <app-lite-shot (click)="openShot(shot)" [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>

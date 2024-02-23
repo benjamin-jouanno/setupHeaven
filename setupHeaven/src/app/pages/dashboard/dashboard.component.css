@@ -14,3 +14,9 @@ li {
 .shot-list {
     position: relative;
 }
+
+.action-bar {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}

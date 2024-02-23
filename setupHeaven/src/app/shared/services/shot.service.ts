@@ -18,4 +18,8 @@ export class ShotService {
   getAllShots(): Observable<IShot[]> {
     return this.httpClient.get<IShot[]>(this.strapiEnv.baseUrl + '/api/shots?populate=*', { headers: { Authorization: 'Bearer ' + this.authenticationService.getJwtToken().token } })
   }
+
+  createShot(shot: IShot): Observable<IShot> {
+    return this.httpClient.post<IShot>(this.strapiEnv.baseUrl + '/api/shots', {data:{...shot}}, { headers: { Authorization: 'Bearer ' + this.authenticationService.getJwtToken().token } })
+  }
 }

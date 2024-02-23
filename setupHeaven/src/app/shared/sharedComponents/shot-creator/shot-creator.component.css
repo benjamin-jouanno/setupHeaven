@@ -1,0 +1,34 @@
+.title {
+
+}
+
+input {
+    background-color: transparent;
+    border: 1px var(--hovered-blue) solid;
+    border-radius: 5px;
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+input::placeholder {
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+textarea {
+    background-color: transparent;
+    border: 1px var(--hovered-blue) solid;
+    border-radius: 5px;
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+textarea::placeholder {
+    color: var(--pastel-yellow);
+    padding-left: .5rem;
+}
+
+.input-zone {
+    margin-bottom: 1rem;
+}
+

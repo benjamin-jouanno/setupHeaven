@@ -9,18 +9,22 @@ import { ThemeTagComponent } from './theme-tag/theme-tag.component';
 import { ShotViewerDialogComponent } from './shot-viewer-dialog/shot-viewer-dialog.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ShotCreatorComponent } from './shot-creator/shot-creator.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent],
+  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent]
+  exports: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent]
 })
 export class SharedComponentsModule { }
