@@ -1,13 +1,45 @@
-<app-menu-bar></app-menu-bar>
-<div class="page h-100">
-    <div class="action-bar  row d-flex flex-row">
-        <div class="Submit">
-            <button class="btn" (click)="createShot()">Submit a shot</button>
+<div class="h-100">
+    <div class="d-flex flex-row">
+        <div class="sidenav">
+            <app-side-nav></app-side-nav>
         </div>
-    </div>
-    <div class="shot-list p-1" *ngIf="_shotList | async as shots">
-        <li *ngFor="let shot of shots.data">
-            <app-lite-shot (click)="openShot(shot)" [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>
-        </li>
+        <div class="w-100">
+            <div class="content">
+                <div class="status-bar d-flex flex-row">
+                    <div class="search">
+                        <mat-icon class="icon" aria-hidden="false" fontIcon="search"></mat-icon>
+                        <input class="inpt" type="text" placeholder="Search">
+                    </div>
+                    <button class="btn submit" (click)="createShot()">
+                        <mat-icon class="add-icon" aria-hidden="false" fontIcon="add_box"></mat-icon>
+                        Submit a shot
+                    </button>
+                </div>
+                <div class="content-manager d-flex flex-row">
+                    <h2>New Shots</h2>
+                    <div class="right-action d-flex flex-row">
+                        <div class="sorter">
+                            Sort by: <label class="sort">Popular</label>
+                        </div>
+                        <div class="filter">
+                            <button class="btn btn-filter">Filter <mat-icon class="add-icon" aria-hidden="false"
+                                    fontIcon="sort"></mat-icon></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <button class="btn btn-filter refresh">Refresh <mat-icon class="add-icon" aria-hidden="false"
+                            fontIcon="refresh"></mat-icon></button>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="content" *ngIf="_shotList | async as shots">
+                <div class="shot-list">
+                    <li *ngFor="let shot of shots.data">
+                        <app-lite-shot (click)="openShot(shot)" [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>
+                    </li>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

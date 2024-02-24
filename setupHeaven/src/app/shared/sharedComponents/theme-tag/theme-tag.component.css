@@ -1,6 +1,6 @@
 .tag {
     border-radius: 15px;
-    background-color: var(--hovered-blue);
+    background-color: var(--app-pink);
     width: fit-content;
     font-size: small;
     padding-left: .4rem;

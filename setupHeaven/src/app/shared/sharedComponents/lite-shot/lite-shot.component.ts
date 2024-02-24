@@ -9,7 +9,7 @@ import { IStrapiEnv, StrapiLocalEnv } from '../../envs/strapi.env';
 })
 export class LiteShotComponent {
   strapiEnv = StrapiLocalEnv;
-
+  show = false;
   @Input() id: string | undefined;
   @Input() shot: IShot | undefined;
 }

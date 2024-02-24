@@ -15,8 +15,69 @@ li {
     position: relative;
 }
 
-.action-bar {
+.sidenav {
+    width: 370px;
+}
+
+.status-bar{
+
+}
+
+mat-icon {
+    height: auto;
+}
+
+.submit {
+    background-color: var(--input-grey);
+    height: 45px;
+}
+
+.submit:hover {
+    background-color: var(--black);
+}
+
+.add-icon {
+    vertical-align: bottom;
+}
+
+.submit {
+    position: absolute;
+    right: 2rem;
+}
+
+.content-manager {
+    margin-top: 4rem;
+}
+
+.sorter{
+
+    vertical-align: middle;
+    padding-top: 0.25rem;
+}
+
+.sort {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.right-action {
+    position: absolute;
+    right: 2rem;
+}
+
+.filter {
+    margin-left: 1rem;
+}
+
+.btn-filter {
+    border: 1px solid var(--border-grey);
+}
+
+.refresh {
+    width: fit-content;
+    margin-left: .7rem;
+}
+
+.separator {
     width: 100%;
-    margin-bottom: 1rem;
-    margin-top: .5rem;
 }

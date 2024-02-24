@@ -11,11 +11,12 @@ import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ShotCreatorComponent } from './shot-creator/shot-creator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 
 
 @NgModule({
-  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent],
+  declarations: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent, SideNavComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -25,6 +26,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent]
+  exports: [MenuBarComponent, LiteShotComponent, ThemeTagComponent, ShotViewerDialogComponent, ImageViewerComponent, ShotCreatorComponent, SideNavComponent]
 })
 export class SharedComponentsModule { }

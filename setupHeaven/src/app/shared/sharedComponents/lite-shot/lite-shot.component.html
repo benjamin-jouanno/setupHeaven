@@ -1,14 +1,20 @@
-<div class="shot d-flex flex-column" *ngIf="shot">
-    <div class="img-zone" *ngIf="shot?.shotPictures">
-        <img class="thumbnail" *ngIf="shot?.shotPictures.data[0]" src="{{ strapiEnv.baseUrl + shot?.shotPictures.data[0].attributes.formats.small.url}}">
-    </div>
-    <div class="info-zone d-flex flex-column">
-        <span class="title">{{ shot?.title }}</span>
-        <span class="username">{{ shot?.username }}</span>
-        <div class="tags">
-            <li style="height: fit-content;" *ngFor="let tag of shot?.themes">
-                <app-theme-tag [tagName]="tag.tagName"></app-theme-tag>
-            </li>
+<div class="shot d-flex flex-column" *ngIf="shot" (mouseover)="show = true" (mouseout)="show = false">
+    <div class="img-zone" *ngIf="shot?.shotPictures"
+        style="background-image: url('{{ strapiEnv.baseUrl + shot?.shotPictures.data[0].attributes.formats.small.url}}')">
+        <div class="info-zone">
+            <div class="dummy d-flex flex-row">
+            </div>
+            <div class="hoverable" *ngIf="show">
+                <div class="d-flex flex-column">
+                    <span class="title">{{ shot?.title }}</span>
+                    <span class="username">{{ shot?.username }}</span>
+                </div>
+                <div class="tags">
+                    <li style="height: fit-content;" *ngFor="let tag of shot?.themes">
+                        <app-theme-tag [tagName]="tag.tagName"></app-theme-tag>
+                    </li>
+                </div>
+            </div>
         </div>
     </div>
 </div>
