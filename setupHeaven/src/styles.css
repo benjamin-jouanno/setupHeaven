@@ -15,6 +15,10 @@ body {
     overflow-y: hidden;
 }
 
+.sidenav {
+    width: 370px;
+}
+
 body {
     margin: 0;
     font-family: "Roboto Mono", monospace;

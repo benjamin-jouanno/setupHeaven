@@ -4,19 +4,19 @@
             <h1>SetupHeaven</h1>
         </div>
         <div class="nav-btns">
-            <button class="btn" [class.activated]="home()">
+            <button class="btn" [class.activated]="home()" (click)="changeRoute('dashboard')">
                 <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
                 Explore new
             </button>
-            <button class="btn" [class.activated]="category()">
+            <button class="btn" [class.activated]="category()" (click)="changeRoute('category')">
                 <mat-icon aria-hidden="false" fontIcon="icecream"></mat-icon>
                 Category
             </button>
-            <button class="btn" [class.activated]="popular()">
+            <button class="btn" [class.activated]="popular()" (click)="changeRoute('popular')">
                 <mat-icon aria-hidden="false" fontIcon="bolt"></mat-icon>
                 Popular shots
             </button>
-            <button class="btn" [class.activated]="favourites()">
+            <button class="btn" [class.activated]="favourites()" (click)="changeRoute('favourites')">
                 <mat-icon aria-hidden="false" fontIcon="favorite"></mat-icon>
                 Favourites
             </button>

@@ -35,6 +35,11 @@ export class SideNavComponent implements OnInit{
     return this.currentRouteUrl === 'favourites' ? true : false
   }
 
+  changeRoute(route: string):void {
+    this.currentRouteUrl = route;
+    this.router.navigateByUrl(route);
+  }
+
   logout(): void {
     this.authenticationService.disconnect();
     this.router.navigateByUrl('welcome');
