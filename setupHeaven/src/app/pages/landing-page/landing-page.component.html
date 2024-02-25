@@ -1,18 +1,39 @@
-<div class="h-100 gradient-page d-flex flex-column">
-    <div class="row title-bar d-flex">
-        <h2 class="title-label col">SetupHeaven</h2>
-        <div class="col ">
-            <button class="sign-in btn" (click)="login()">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="perm_identity"></mat-icon>
-                Sign in!
-            </button>
-        </div>
+<div class="page h-100 w-100 d-flex flex-column">
+    <div class="row d-flex flex-row">
+        <h1>SetupHeaven</h1>
+        <button class="btn submit" (click)="login()">
+            <mat-icon class="add-icon" aria-hidden="false" fontIcon="add_box"></mat-icon>
+            Get started
+        </button>
     </div>
-    <div class="row content">
-        <div class="title panel p1">
-            <div class="n-text">
-            <h1 class="accent">Welcome to setup Heaven</h1>
-            <span>A place where share and discover new desk setups, get inspiration for your next working / entairtanement space.</span>
+    <div class="row d-flex flex-row">
+        <div class="col d-flex flex-column form-zone justify-content-center align-items-center">
+            <div class="textable">
+                <h1 class="title">
+                    SetupHeaven is your place to share and discover new setups
+                </h1>
+                <div class="subtitle">
+                    Look for new design ideas, share your setup progress, and find new inspirations.
+                    Lets make this sharing space a creative and aesthetic place for all setup design lovers.
+                </div>
+                <button class="cta" (click)="login()">
+                    Join the adventure now
+                </button>
+            </div>
+        </div>
+        <div class="col d-flex flex-column justify-content-center">
+            <div class="d-flex flex-row top">
+                <div class="col d-flex flex-column top">
+                    <div class="block-h"></div>
+                    <div class="block-h" style="background-color: var(--app-pink);"></div>
+                </div>
+                <div class="col d-flex flex-column top">
+                    <div class="block" style="background-color: var(--accent-green);"></div>
+                </div>
+                <div class="row block" style="background-color: var(--accent-green);"></div>
+            </div>
+            <div class="row block p-right">
+
             </div>
         </div>
     </div>

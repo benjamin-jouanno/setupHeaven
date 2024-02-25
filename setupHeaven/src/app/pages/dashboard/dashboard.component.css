@@ -30,6 +30,8 @@ mat-icon {
 .submit {
     background-color: var(--input-grey);
     height: 45px;
+    position: absolute;
+    right: 2rem;
 }
 
 .submit:hover {
@@ -38,11 +40,6 @@ mat-icon {
 
 .add-icon {
     vertical-align: bottom;
-}
-
-.submit {
-    position: absolute;
-    right: 2rem;
 }
 
 .content-manager {
