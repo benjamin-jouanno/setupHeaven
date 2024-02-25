@@ -27,6 +27,9 @@ export const routes: Routes = [
         path: 'favourites', component: FavouritesComponent, canActivate: [AuthGuard]
     },
     {
+        path: '/', component: LandingPageComponent
+    },
+    {
         path: '**', component: LandingPageComponent
-    }
-];
+    },
+]
