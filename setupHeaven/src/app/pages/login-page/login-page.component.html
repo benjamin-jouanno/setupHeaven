@@ -1,3 +1,5 @@
+
+<!--
 <div class="h-100 gradient-page d-flex flex-column justify-content-center align-items-center">
     <div class="panel login-panel  d-flex flex-column">
         <div class="title-bar d-flex">
@@ -60,4 +62,42 @@
             </div>
         </div>
     </div>
+</div>
+-->
+<div class="row h-100 w-100 d-flex flex-row">
+    <div class="col d-flex flex-column form-zone justify-content-center align-items-center">
+        <div class="title">
+            <h1>SetupHeaven</h1>
+            <div>Welcome to SetupHeaven, have you got account yet ?</div>
+            <div class="clickable" (click)="switchStatus()" *ngIf="!isRegister; else login">Register now!</div>
+            <ng-template #login><div  class="clickable" (click)="switchStatus()">Login!</div></ng-template>
+            <div class="input-zone">
+                <div>
+                    <mat-icon class="icon" aria-hidden="false" fontIcon="alternate_email"></mat-icon>
+                    <input class="inpt" [formControl]="identifier" type="email" placeholder="Email*">
+                </div>
+                <div *ngIf="isRegister">
+                    <mat-icon class="icon" aria-hidden="false" fontIcon="person"></mat-icon>
+                    <input class="inpt" [formControl]="username" type="text" placeholder="Username*">
+                </div>
+                <div>
+                    <mat-icon class="icon" aria-hidden="false" fontIcon="lock"></mat-icon>
+                    <input class="inpt" [formControl]="password" type="password" placeholder="Password*">
+                </div>
+                <div *ngIf="isRegister">
+                    <mat-icon class="icon" aria-hidden="false" fontIcon="lock"></mat-icon>
+                    <input class="inpt" [formControl]="confirmPassword" type="password" placeholder="Repeat password*">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="cta" (click)="authenticate()" *ngIf="!isRegister">
+                    Login
+                </button>
+                <button class="cta" (click)="createAccount()" *ngIf="isRegister">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col art-zone"> </div>
 </div>

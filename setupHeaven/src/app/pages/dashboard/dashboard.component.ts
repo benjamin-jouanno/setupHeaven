@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit, OnDestroy{
   constructor(private shotService: ShotService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this._shotList = this.shotService.getAllShots()
+    this._shotList = this.shotService.getAllShots();
   }
 
   openShot(shot: IShot): void {
@@ -35,6 +35,10 @@ export class DashboardComponent implements OnInit, OnDestroy{
       return res
     });
     return false
+  }
+
+  refresh(): void {
+    this._shotList = this.shotService.getAllShots();
   }
 
   ngOnDestroy(): void {

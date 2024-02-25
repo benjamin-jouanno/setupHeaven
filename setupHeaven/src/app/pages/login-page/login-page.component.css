@@ -1,44 +1,49 @@
-.login-panel {
-    width: 70%;
+.art-zone {
+    margin: 2rem;
+    background-image: url(../../../assets/images/login-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
 }
 
-.title-bar {
-    padding: .7rem;
-    border-radius: 10px 10px 0px 0px;
-    background-color: var(--hovered-blue);
+h1 { text-align: center;}
+
+.clickable {
+    cursor: pointer;
+    color: var(--app-pink);
+}
+mat-icon {
+    height: auto;
 }
 
-.input-box {
+.input-zone {
+    margin-top: 3rem;
+}
+
+.inpt{
+    width: 480px;
+    margin-bottom: 1.5rem;
+}
+
+.cta {
+    width: 215px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 16px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    transition: ease-in-out .3s;
+
     mat-icon {
-        vertical-align:sub;
+        vertical-align: sub;
     }
 }
 
-input {
-    background-color: transparent;
-    border: 1px var(--hovered-blue) solid;
-    border-radius: 5px;
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
-}
-
-input::placeholder {
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
-}
-
-.btn {
-    width: fit-content;
-    text-align: center;
-}
-
-.register-line {
-    margin-top: 1rem;
-    font-size: small;
-    .register {
-        margin-left: .2rem;
-        margin-right: .2rem;
-        color: var(--hovered-blue);
-        cursor: pointer;
-    }
+.cta:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transition: ease-in-out .3s;
 }
