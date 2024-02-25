@@ -3,6 +3,7 @@ import { ShotService } from '../../services/shot.service';
 import { AuthenticationService } from '../../services/authentication.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IShot } from '../../types/shot.type';
+import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-shot-creator',
@@ -17,7 +18,7 @@ export class ShotCreatorComponent implements OnInit{
     description: new FormControl(''),
   })
 
-  constructor(private shotService: ShotService , private authenticationService: AuthenticationService) {}
+  constructor(private shotService: ShotService , private authenticationService: AuthenticationService, private dialogRef: DialogRef) {}
 
   ngOnInit(): void {
         this.authenticationService.getMeUser().subscribe(res => {this.username = res.username});
@@ -38,8 +39,12 @@ export class ShotCreatorComponent implements OnInit{
         shotPictures: []
       };
       this.shotService.createShot(shot).subscribe(res => {
-        
+        this.dialogRef.close();
       })
     }
+  }
+
+  cancel(): void {
+    this.dialogRef.close();
   }
 }

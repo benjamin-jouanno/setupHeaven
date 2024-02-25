@@ -5,19 +5,22 @@
         <form [formGroup]="shotForm">
             <div class="input-zone d-flex flex-column">
                 <h4>Title *</h4>
-                <input formControlName="title" type="text" placeholder="title">
+                <input class="inpt" formControlName="title" type="text" placeholder="title">
             </div>
             <div class="input-zone d-flex flex-column">
                 <h4>Subtitle *</h4>
-                <input formControlName="subtitle" type="text" placeholder="subtitle">
+                <input class="inpt" formControlName="subtitle" type="text" placeholder="subtitle">
             </div>
             <div class="input-zone d-flex flex-column">
                 <h4>Description *</h4>
-                <textarea formControlName="description" type="text-area" placeholder="description">
+                <textarea class="inpt" formControlName="description" type="text-area" placeholder="description">
                 </textarea>
             </div>
         <div class="separator"></div>
-            <button class="btn submit" (click)="submit()">Create</button>
         </form>
+        <mat-dialog-actions>
+            <button class="btn btn-filter" mat-dialog-close>Cancel</button>
+            <button class="btn btn-filter submit" (click)="submit()">Create</button>
+          </mat-dialog-actions>
     </div>
 </div>

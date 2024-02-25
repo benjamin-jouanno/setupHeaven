@@ -28,7 +28,9 @@ export class DashboardComponent implements OnInit, OnDestroy{
   }
 
   createShot(): boolean {
-    const dialogRef = this.dialog.open(ShotCreatorComponent);
+    const dialogRef = this.dialog.open(ShotCreatorComponent, {
+      panelClass:'d2x-dialog-panel',
+    });
     dialogRef.afterClosed().pipe(takeUntil(this.destroy$)).subscribe((res: true) => {
       return res
     });

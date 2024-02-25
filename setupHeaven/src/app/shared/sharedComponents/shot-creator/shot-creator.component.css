@@ -1,34 +1,26 @@
-.title {
-
+.input-zone {
+    margin-bottom: 2rem;
 }
 
-input {
-    background-color: transparent;
-    border: 1px var(--hovered-blue) solid;
-    border-radius: 5px;
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
-}
-
-input::placeholder {
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
+.inpt {
+    padding-left: 1rem;
 }
 
 textarea {
-    background-color: transparent;
-    border: 1px var(--hovered-blue) solid;
-    border-radius: 5px;
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
+    min-height: 150px;
 }
 
-textarea::placeholder {
-    color: var(--pastel-yellow);
-    padding-left: .5rem;
+.separator {
+    margin-bottom: 1.5rem;
+}
+.submit {
+    position: absolute;
+    right: 0rem;
+    background-color: var(--app-pink);
+    color: var(--white);
+    border: none;
 }
 
-.input-zone {
-    margin-bottom: 1rem;
+.submit:hover {
+    background-color: var(--black);
 }
-
