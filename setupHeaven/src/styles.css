@@ -75,6 +75,10 @@ h1 {
     padding: 1rem;
 }
 
+.btn-filter {
+    border: 1px solid var(--border-grey);
+}
+
 .btn {
     font-weight:600;
     letter-spacing: 2px;

@@ -69,10 +69,6 @@ mat-icon {
     margin-left: 1rem;
 }
 
-.btn-filter {
-    border: 1px solid var(--border-grey);
-}
-
 .refresh {
     width: fit-content;
     margin-left: .7rem;

@@ -9,14 +9,25 @@ mat-icon {
     float: right;
     right: 1rem;
     top: 1rem;
-    color: var(--pastel-yellow);
+    color: var(--black);
     font-size: x-large;
     font-weight: 700;
     cursor: pointer;
 }
 
 mat-dialog-actions {
-    background-color: var(--turquoise-blue);
+    height: 74px;
+    background-color: var(--white);
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 
+}
+
+button {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+}
+
+.btn-filter {
+    border: 1px solid var(--border-grey);
 }
