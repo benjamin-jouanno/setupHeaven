@@ -22,7 +22,8 @@ export class DashboardComponent implements OnInit, OnDestroy{
 
   openShot(shot: IShot): void {
     const dialogRef = this.dialog.open(ShotViewerDialogComponent, {
-      data: shot
+      data: shot,
+      panelClass:'d2x-dialog-panel',
     });
   }
 

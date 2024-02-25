@@ -81,3 +81,8 @@ mat-icon {
 .separator {
     width: 100%;
 }
+
+.listable {
+    height: 100vh;
+    overflow-y: scroll;
+}

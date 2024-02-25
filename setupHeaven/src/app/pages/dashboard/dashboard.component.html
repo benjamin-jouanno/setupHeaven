@@ -1,4 +1,4 @@
-<div class="h-100">
+<div class="h-100 no-scroll-y">
     <div class="d-flex flex-row">
         <div class="sidenav">
             <app-side-nav></app-side-nav>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="separator"></div>
-            <div class="content" *ngIf="_shotList | async as shots">
+            <div class="content listable" *ngIf="_shotList | async as shots">
                 <div class="shot-list">
                     <li *ngFor="let shot of shots.data">
                         <app-lite-shot (click)="openShot(shot)" [id]="shot.id" [shot]="shot.attributes"></app-lite-shot>

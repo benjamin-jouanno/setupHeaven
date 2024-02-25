@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+.no-scroll-y {
+    overflow-y: hidden;
+}
+
 body {
     margin: 0;
     font-family: "Roboto Mono", monospace;
@@ -31,10 +35,14 @@ body {
     bs-gutter-x: 0px;
 }
 
+li {
+    list-style-type: none
+}
+
 .dialog-page {
     padding: 1.5rem;
-    background-color: var(--light-navy-blue);
-    color: var(--pastel-yellow);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .gradient-page {
@@ -126,23 +134,56 @@ textarea:focus, input:focus{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
+    height: 5px;
+    scroll-margin-right: 1em;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
     background: transparent;
-    padding-right: 5px;
-
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--navy-blue);
+    background: var(--scroll-bar-grey);
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--navy-blue);
+    background: var(--scroll-bar-grey);
   }
+
+  .d2x-dialog-panel{
+    width: 100vh !important;
+    max-width: 100px;
+}
+
+.description {
+    margin-top: 1.5rem;
+    max-height: 180px;
+    overflow-y: scroll;
+}
+
+.setup-items {
+    padding-top: 1.5rem;
+}
+
+.items {
+    margin-left: 1.5rem;
+    border-right: 1px solid var(--border-grey);
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+}
+
+.value {
+    color: var(--app-pink);
+    text-align: end;
+}
+
+.config {
+    margin-left: 1.5rem;
+}

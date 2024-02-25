@@ -1,62 +1,75 @@
 <div class="dialog-page">
     <div class="shot d-flex flex-column" *ngIf="data">
-        <div class="title">
-            <h2>{{ data.attributes.title}} <span class="username">{{ data.attributes.username }}</span></h2>
-            <div>{{ data.attributes.subtitle }}</div>
-            <div class="tags">
-                <li style="height: fit-content;" *ngFor="let tag of data.attributes.themes">
-                    <app-theme-tag [tagName]="tag.tagName"></app-theme-tag>
-                </li>
+        <div class="header d-flex flex-row">
+            <div class="title d-flex flex-column">
+                <h3>{{ data.attributes.title}}</h3>
+                <div>{{ data.attributes.subtitle}}</div>
             </div>
-            <div class="separator"></div>
-            <div class="description" *ngIf="data.attributes.description">{{ data.attributes.description }}</div>
-            <div class="separator"></div>
-            <div class="galery d-flex flex-row">
-                <li class="images" (click)="openImage(images.attributes.url)" *ngFor="let images of data.attributes.shotPictures.data">
-                        <img class="image-item" src="{{strapiEnv.baseUrl + images.attributes.formats.small.url}}">
-                </li>
+            <div class="user-area d-flex flex-row">
+                <div class="username">{{ data.attributes.username}}</div>
+                <div class="avatar">
+                    <div class="avatar-inner">
+                        {{ data.attributes.username.charAt(0).toUpperCase()}}
+                    </div>
+                </div>
             </div>
-            <div class="setup d-flex flex-row">
-                <div class="setup-object" *ngIf="data.attributes.setupObjects.length > 0">
-                    <div class="section-title">
-                        <h4>Objects in the setup:</h4>
-                        <div class="entry">
-                            <div class="object d-flex flex-column" *ngFor="let object of data.attributes.setupObjects">
-                                <div class="type">
-                                    {{ object.ObjectType }} :
-                                </div>
-                                <div class="data">
-                                    {{ object.title }}
-                                </div>
-                            </div>
+        </div>
+        <div class="tags d-flex flex-row">
+            <li style="height: fit-content;" *ngFor="let tag of data.attributes.themes">
+                <app-theme-tag [tagName]="tag.tagName"></app-theme-tag>
+            </li>
+        </div>
+        <div class="separator"></div>
+        <div class="galery d-flex flex-row">
+            <li class="images" (click)="openImage(images.attributes.url)"
+                *ngFor="let images of data.attributes.shotPictures.data">
+                <img class="image-item" src="{{strapiEnv.baseUrl + images.attributes.formats.small.url}}">
+            </li>
+        </div>
+        <div class="separator" *ngIf="data.attributes.description"></div>
+        <div class="description" *ngIf="data.attributes.description">{{ data.attributes.description != '' ?
+            data.attributes.description: 'No description yet !' }}</div>
+        <div class="separator"></div>
+        <div class="row setup-items d-flex flex-row">
+            <div class="col items">
+                <div class="section-title">
+                    <h3>Items in setup:</h3>
+                </div>
+                <div class="objects">
+                    <div class="object d-flex flex-column" *ngFor="let object of data.attributes.setupObjects">
+                        <div class="type">
+                            {{ object.ObjectType }}:
+                        </div>
+                        <div class="data">
+                            {{ object.title }}
                         </div>
                     </div>
                 </div>
-                <div class="pc-setup"  *ngIf="data.attributes.cptConfig">
-                    <div class="section-title">
-                        <h4>Computer config:</h4>
-                    </div>
-                    <div class="entry">
-                        CPU: <span class="value">{{ data.attributes.cptConfig?.cpu }}</span>
-                    </div>
-                    <div class="entry">
-                        GPU: <span class="value">{{ data.attributes.cptConfig?.gpu }}</span>
-                    </div>
-                    <div class="entry">
-                        Motherboard: <span class="value">{{ data.attributes.cptConfig?.motherboard }}</span>
-                    </div>
-                    <div class="entry">
-                        RAM: <span class="value">{{ data.attributes.cptConfig?.ram }}</span>
-                    </div>
-                    <div class="entry">
-                        HDD: <span class="value">{{ data.attributes.cptConfig?.hdd }}</span>
-                    </div>
-                    <div class="entry">
-                        SSD: <span class="value">{{ data.attributes.cptConfig?.ssd }}</span>
-                    </div>
-                    <div class="entry">
-                        Case: <span class="value">{{ data.attributes.cptConfig?.case }}</span>
-                    </div>
+            </div>
+            <div class="col config">
+                <div class="section-title">
+                    <h3>Computer config:</h3>
+                </div>
+                <div class="entry">
+                    CPU: <span class="value">{{ data.attributes.cptConfig?.cpu }}</span>
+                </div>
+                <div class="entry">
+                    GPU: <span class="value">{{ data.attributes.cptConfig?.gpu }}</span>
+                </div>
+                <div class="entry">
+                    Motherboard: <span class="value">{{ data.attributes.cptConfig?.motherboard }}</span>
+                </div>
+                <div class="entry">
+                    RAM: <span class="value">{{ data.attributes.cptConfig?.ram }}</span>
+                </div>
+                <div class="entry">
+                    HDD: <span class="value">{{ data.attributes.cptConfig?.hdd }}</span>
+                </div>
+                <div class="entry">
+                    SSD: <span class="value">{{ data.attributes.cptConfig?.ssd }}</span>
+                </div>
+                <div class="entry">
+                    Case: <span class="value">{{ data.attributes.cptConfig?.case }}</span>
                 </div>
             </div>
         </div>
